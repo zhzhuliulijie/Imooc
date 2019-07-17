@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajaxes6</title>
+    <script src="ajax.js"></script>
+</head>
+<body>
+<button type="button" id="getbut">get请求</button>
+<button type="button" id="postbut">post请求</button>
+<div id="box"></div>
+<script>
+    var getbut = document.getElementById("getbut");
+    var postbut = document.getElementById("postbut");
+    var box = document.getElementById("box");
+    getbut.onclick = function () {
+        ajax.get('demo.php', 'name=刘利杰&wife=李庆杰', function (data) {
+            box.innerText = data;
+        })
+    }
+    postbut.onclick = function () {
+        ajax.post('demo2.php', 'name=刘利杰&wife=李庆杰', function (data) {
+            box.innerText = data;
+        })
+    }
+</script>
+</body>
+</html>

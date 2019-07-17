@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax demo</title>
+    <script src="js/ajax.js"></script>
+</head>
+<body>
+<button id="getbtn">申请</button>
+<div id="box"></div>
+
+<script>
+    let btn = document.getElementById("getbtn");
+    let box = document.getElementById("box");
+    btn.onclick = () => {
+        let params = {
+            'id': 123,
+            'name': '刘利杰',
+            'nage': 29,
+            'wife': '李庆杰',
+            'wage': 26
+        };
+        $.get('./project/demo.php', params, data => {
+            box.innerText = data.wage;
+        }, 'json');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "page": 1,
+  "perPage": 20,
+  "statusCode": 200,
+  "message": "OK",
+  "data": [
+    {"id": 1, "username": "刘杰", "age": 29, "sex": "男"},
+    {"id": 2, "username": "李杰", "age": 26, "sex": "女"},
+    {"id": 3, "username": "利杰", "age": 29, "sex": "男"},
+    {"id": 4, "username": "庆杰", "age": 26, "sex": "女"}
+  ]
+}
